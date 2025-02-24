@@ -1,0 +1,11 @@
+id,nombre,categoria,fecha_creacion,tipo_transmision,plataforma,region,autor,funcion,objetivo,uso_cpu,duracion,ruta,nivel
+11,Malware_0,Autentificacion,2025-01-01,Memoria,Mac,Global,Desconocido,Robo de información,Robo de datos personales,99%,Variable,Red,1
+12,Malware_1,Explotacion,2025-01-01,Memoria,Linux,Global,Desconocido,Robo de información,Robo de datos personales,46%,Variable,Internet,2
+13,Malware_2,Explotacion,2025-01-01,Correo electrónico,Mac,Global,Desconocido,Robo de información,Robo de datos personales,57%,Variable,Red,1
+14,Malware_3,Interceptacion,2025-01-01,Red,Mac,Global,Desconocido,Robo de información,Robo de datos personales,57%,Variable,Red,1
+15,Malware_4,Explotacion,2025-01-01,Correo electrónico,Windows,Global,Desconocido,Robo de información,Robo de datos personales,75%,Variable,Red,1
+16,Malware_5,Interceptacion,2025-01-01,Memoria,Windows,Global,Desconocido,Robo de información,Robo de datos personales,57%,Variable,Internet,0
+17,Malware_6,Interceptacion,2025-01-01,Memoria,Mac,Global,Desconocido,Robo de información,Robo de datos personales,13%,Variable,Red,3
+18,Malware_7,Phishing,2025-01-01,Internet,Linux,Global,Desconocido,Robo de información,Robo de datos personales,94%,Variable,Dispositivos USB,3
+19,Malware_8,Malware,2025-01-01,Red,Linux,Global,Desconocido,Robo de información,Robo de datos personales,3%,Variable,Dispositivos USB,0
+20,Malware_9,Malware,2025-01-01,Red,Linux,Global,Desconocido,Robo de información,Robo de datos personales,5%,Variable,Internet,0

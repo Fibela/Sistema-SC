@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Análisis</title>
+</head>
+<body>
+    <h1>Enviar Datos para Análisis</h1>
+    <form action="/realizar_analisis/analizar/" method="post">
+         {% csrf_token %}
+        <label for="opcion">Opción:</label>
+        <select name="opcion" id="opcion">
+            <option value="analizar">Analizar</option>
+        </select>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

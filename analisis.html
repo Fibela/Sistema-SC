@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis del Equipo</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const socketUrl = `${window.location.protocol.replace('http', 'ws')}//${window.location.host}/ws/metricas/`;
+            const socket = new WebSocket(socketUrl);
+
+            socket.onopen = function() {
+                console.log('WebSocket connection opened:', socketUrl);
+            };
+
+            socket.onmessage = function(event) {
+                const data = JSON.parse(event.data);
+                document.getElementById('uso_cpu').innerText = `Uso de CPU: ${data.uso_cpu}%`;
+                const estadoDefender = data.estado_defender ? JSON.stringify(data.estado_defender) : 'N/A';
+                document.getElementById('estado_defender').innerText = `Estado de Windows Defender: ${estadoDefender}`;
+            };
+
+            socket.onclose = function(event) {
+                console.error('WebSocket cerrado inesperadamente:', event);
+            };
+
+            socket.onerror = function(error) {
+                console.error('WebSocket error:', error);
+            };
+        });
+    </script>
+</head>
+<body>
+    <h1>Resultados del Análisis del Equipo</h1>
+    <p><strong>Uso de CPU:</strong> {{ resultado.uso_cpu }}%</p>
+    <p><strong>Estado de Windows Defender:</strong></p>
+    <ul>
+        <li>Protección en tiempo real: {{ resultado.estado_defender.RealTimeProtectionEnabled }}</li>
+        <li>Protección contra manipulaciones: {{ resultado.estado_defender.IsTamperProtected }}</li>
+        <li>Última actualización de la firma del antivirus: {{ resultado.estado_defender.AntivirusSignatureLastUpdated }}</li>
+    </ul>
+    <p><strong>En Peligro:</strong> {{ resultado.en_peligro }}</p>
+
+    <h2>Métricas en Tiempo Real</h2>
+    <p id="uso_cpu">Uso de CPU: N/A</p>
+    <p id="estado_defender">Estado de Windows Defender: N/A</p>
+</body>
+</html>
