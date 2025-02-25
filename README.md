@@ -27,4 +27,4 @@ Django este framework utilizado para este proyecto, puesto que este soporta no s
 
 El sistema SC tiene una base de datos en la cual se basara para el analisis de los quipos, pero si por algun motivo no se encuentra el virus o ataque dentro de la base de datos, este lo recopilara(sin que haya duplicados de entradas de datos)para su futura prevencion y detencion
 
-El servidor para el funcionamiento del sistema SC es uno denominado daphne para que no tengo errores el codigo y funcione a su maxima capacida el websocket dentro del servidor asgi
+El servidor para el funcionamiento del sistema SC es uno denominado daphne para que no tengo errores el codigo y funcione a su maxima capacidad el websocket dentro del servidor asgi
